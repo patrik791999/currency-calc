@@ -17,6 +17,11 @@ $RECYCLE.BIN/
 log.txt
 npm-debug.log*
 
+/environment.ts
+/environment.prod.ts
+environments
+
+
 /.angular
 /.idea
 /.ionic
