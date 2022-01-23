@@ -1,0 +1,8 @@
+{
+  "name": "CurrencyCalc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "a768a3ab"
+}
