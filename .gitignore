@@ -20,6 +20,9 @@ npm-debug.log*
 /environment.ts
 /environment.prod.ts
 environments
+services
+/currency.service.spec.ts
+/currency.service.ts
 
 
 /.angular
