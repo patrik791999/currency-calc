@@ -1,18 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Courses
+      Calculator
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content padding>
+  <!-- #region value -->
+  <div class="contents">
+    <ion-row>
+      <ion-input type="number" class="value-input" [(ngModel)]="fromValue" placeholder="From" ></ion-input>
+    </ion-row>
+
+    <ion-row>
+      <ion-input type="number" class="value-input" [(ngModel)]="resultRate" placeholder="To" ></ion-input>
+    </ion-row>
+  </div>
+
+  <!-- #endregion -->
+
+  <!-- #region -->
+  <ion-row>
+    <ion-col class="selectors">
+      <select class="select-list" [(ngModel)]="fromCurr" >
+        <option *ngFor="let item of countryCodes" selected value="{{item}}">{{item}}</option>
+      </select>
+    </ion-col>
+
+    <ion-col>
+      <select class="select-list" [(ngModel)]="toCurr" >
+        <option *ngFor="let item of countryCodes" value="{{item}}">{{item}}</option>
+      </select>
+    </ion-col>
+  </ion-row>
+
+  <button expand="block" class="select-list" (click)="calculateCurrencyOne()" >Block Button </button>
+
 </ion-content>
-
