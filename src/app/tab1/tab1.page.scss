@@ -24,7 +24,7 @@ page-home {}
 .value-input {
   font: 25px $font-stack;
   font-weight: 300;
-  margin: 5% 2.5%;
+  margin: 2% 2%;  //povodne 5  2.5
   width: 100%;
   padding: 0 3%;
   color: #222;
@@ -34,11 +34,28 @@ page-home {}
   background-color: #ffffff;
 }
 
-.select-list {
+.button {
   appearance: none;
-  margin: 5% auto;
-  padding: 15px;
+  margin:  auto; //povodne 5
+  padding: 12.2px 19.3px;
+  width: 90%;
+  height: 90%;
   display: block;
+  box-shadow: 0 10px 10px 0 rgba(34, 34, 34, 0.404);
+  background-color: #9700ed;
+  border: 0 transparent;
+  border-radius: 10px;
+  font-family: $font-stack;
+  font-size: 30px;
+  color: #f3f3f3;
+}
+
+.select-list-ion {
+  appearance: none;
+  margin:  auto; //povodne 5
+  width: 90%;
+  height: 90%;
+  padding: 10px;
   box-shadow: 0 10px 10px 0 rgba(34, 34, 34, 0.404);
   background-color: #9700ed;
   border: 0 transparent;
@@ -50,6 +67,7 @@ page-home {}
 
 .selectors {
   border-right: 1px solid #cbcbcb;
+  height: 100%;
 }
 
 .selector-txts p{

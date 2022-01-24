@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-title class="ion-text-center">
       Calculator
     </ion-title>
   </ion-toolbar>
@@ -11,11 +11,11 @@
   <!-- #region value -->
   <div class="contents">
     <ion-row>
-      <ion-input type="number" class="value-input" [(ngModel)]="fromValue" placeholder="From" ></ion-input>
+      <ion-input type="number" min="1"  class="value-input" [(ngModel)]="fromValue" placeholder="From" (keyup)="clear()"></ion-input>
     </ion-row>
 
     <ion-row>
-      <ion-input type="number" class="value-input" [(ngModel)]="resultRate" placeholder="To" ></ion-input>
+      <ion-input type="number" disabled class="value-input" [(ngModel)]="resultRate" placeholder="To" ></ion-input>
     </ion-row>
   </div>
 
@@ -23,19 +23,33 @@
 
   <!-- #region -->
   <ion-row>
-    <ion-col class="selectors">
-      <select class="select-list" [(ngModel)]="fromCurr" >
-        <option *ngFor="let item of countryCodes" selected value="{{item}}">{{item}}</option>
-      </select>
+      <ion-col size="6" class="selectors">
+          <ion-select  class="select-list-ion"  [(ngModel)]="fromCurr">
+            <ion-select-option value="EUR" >EUR</ion-select-option>
+            <ion-select-option *ngFor="let item of countryCodes"  value="{{item}}">{{item}}</ion-select-option>
+          </ion-select>
+      </ion-col>
+
+
+    <ion-col size="6" class="selectors">
+      <ion-select  class="select-list-ion" [(ngModel)]="toCurr">
+        <ion-select-option value="USD">USD</ion-select-option>
+        <ion-select-option *ngFor="let item of countryCodes"  value="{{item}}">{{item}}</ion-select-option>
+      </ion-select>
+<!--      <select class="select-list" [(ngModel)]="toCurr" >-->
+<!--        <option *ngFor="let item of countryCodes" value="{{item}}">{{item}}</option>-->
+<!--      </select>-->
+    </ion-col >
+
+    <ion-col size="6" class="selectors">
+      <button expand="block" class="button" (click)="calculateCurrency()" >Convert</button>
     </ion-col>
 
-    <ion-col>
-      <select class="select-list" [(ngModel)]="toCurr" >
-        <option *ngFor="let item of countryCodes" value="{{item}}">{{item}}</option>
-      </select>
+    <ion-col size="6" class="selectors">
+      <button expand="block" class="button" (click)="switchCurrencies()" >Switch</button>
     </ion-col>
   </ion-row>
 
-  <button expand="block" class="select-list" (click)="calculateCurrencyOne()" >Block Button </button>
+<!--  <button expand="block" class="select-list" (click)="calculateCurrencyOne()" >Convert</button>-->
 
 </ion-content>

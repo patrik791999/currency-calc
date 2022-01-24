@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Storage} from '@capacitor/storage';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
+  coursesTable = new Map();
 
-  constructor() {}
+  constructor() {
+    this.getFromStorage();
+  }
 
+  async getFromStorage() {
+
+   const {value} = await Storage.get({
+      key: 'currency',
+    });
+   const test = JSON.parse(value);
+    console.log(test);
+  }
 }
