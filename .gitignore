@@ -21,6 +21,7 @@ npm-debug.log*
 /environment.prod.ts
 environments
 services
+/src/app/services
 /currency.service.spec.ts
 /currency.service.ts
 
