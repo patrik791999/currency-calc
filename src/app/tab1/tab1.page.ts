@@ -37,12 +37,11 @@ export class Tab1Page implements OnInit{
   async fetchCountries() {
     try {
       this.latest = await this.cuService.getCountries();
-      // eslint-disable-next-line guard-for-in
-      // for (const x in this.latest.rates) {
-      //   this.countryCodes.push(x);
-      //   this.countryCurrency.set(x,this.latest.rates[x].toString());
-      // }
       this.countryCurrency = this.latest.rates;
+      // eslint-disable-next-line guard-for-in
+      for (const x in this.latest.rates) {
+        this.countryCodes.push(x);
+      }
 
     } catch (err) {
       console.error(err);
@@ -87,15 +86,6 @@ export class Tab1Page implements OnInit{
     const timestamp = new Date(this.latest.date).getTime()/1000;
       if (this.latest.rates === undefined || ((today - timestamp)/3600) > 24  ){
         await this.fetchCountries();
-        // eslint-disable-next-line guard-for-in
-        // for (const [key,value] of this.countryCurrency.entries()) {
-        //
-        // }
-        // const obj = {};
-        // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
-        // this.countryCurrency.forEach(function(value,key){
-        //   obj[key] = value;
-        // });
         await Storage.set({
           key: 'currency',
           value: JSON.stringify(this.countryCurrency) ,

@@ -7,18 +7,23 @@ import {Storage} from '@capacitor/storage';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-  coursesTable = new Map();
+  coursesTable = {};
+  keys = [];
 
   constructor() {
     this.getFromStorage();
   }
 
   async getFromStorage() {
-
    const {value} = await Storage.get({
       key: 'currency',
     });
-   const test = JSON.parse(value);
-    console.log(test);
+   this.coursesTable = JSON.parse(value);
+    console.log(this.coursesTable);
+    // eslint-disable-next-line guard-for-in
+    for (const key in this.coursesTable) {
+        this.keys.push(key);
+
+    }
   }
 }

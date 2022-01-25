@@ -1,23 +1,23 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Courses Table
+    <ion-title class="ion-text-center">
+       Courses table for EUR
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-grid>
+  <ion-grid  >
     <ion-row>
-      <ion-col size="6">Country Code
-        <ion-row *ngFor="let item of Storage"  value="{{item}}">{{item}}</ion-row>
+      <ion-col class="col-title" size="6">Country Code</ion-col>
+      <ion-col class="col-title" size="6">Course</ion-col>
 
-      </ion-col>
+    </ion-row>
 
-      <ion-col size="6">Course
-
-
-      </ion-col>
+    <ion-row class="row-content" size="6" *ngFor="let key of keys"  >
+        <ion-col size="6" > <h6>{{key}}</h6> </ion-col>
+        <ion-col size="6" > <h6>{{coursesTable[key].toFixed(4)}}</h6></ion-col>
     </ion-row>
   </ion-grid>
+
 </ion-content>
