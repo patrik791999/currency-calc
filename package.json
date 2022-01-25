@@ -1,16 +1,17 @@
 {
-  "name": "currency-calc",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "resources": "cordova-res android && node scripts/resources.js"
   },
+  "name": "currency-calc",
+  "version": "0.0.1",
+  "author": "Ionic Framework",
+  "homepage": "https://ionicframework.com/",
   "private": true,
   "dependencies": {
     "@angular/common": "~13.0.0",
@@ -19,6 +20,7 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "@capacitor/android": "3.4.0",
     "@capacitor/app": "1.1.0",
     "@capacitor/core": "3.4.0",
     "@capacitor/haptics": "1.1.4",
@@ -47,6 +49,7 @@
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
+    "cordova-res": "^0.15.4",
     "eslint": "^7.6.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
