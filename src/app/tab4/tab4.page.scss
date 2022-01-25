@@ -1,0 +1,28 @@
+$colors: (
+  primary:    #5f04c0,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f3f3f3,
+  dark:       #222
+);
+
+$font-stack: Roboto , 'sans-serif';
+$font-secondary: Open Sans, 'sans-serif';
+
+.col-title{
+  text-align: center;
+  border: 1px solid #cbcbcb;
+  font-family: $font-stack;
+  font-size: 25px;
+  background-color: #9700ed;
+}
+h6{
+  margin: 1px;
+}
+
+.row-content ion-col{
+  text-align: center;
+  font-family: $font-stack;
+  border: 1px solid #cbcbcb;
+
+}

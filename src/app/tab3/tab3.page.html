@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
   <div class="contents">
     <ion-row >
-      <ion-col size="11"   >
+      <ion-col size="12"   >
         <ion-item >
           <ion-label >Date</ion-label>
           <ion-input
@@ -33,7 +33,7 @@
     </ion-row>
 
     <ion-row>
-      <ion-col size="6" class="selectors">
+      <ion-col size="6" class="selectors "  >
         <ion-select  class="select-list-ion"  [(ngModel)]="baseCurr">
           <ion-select-option value="EUR" >EUR</ion-select-option>
           <ion-select-option *ngFor="let key of keysSelector"  value="{{key}}">{{key}}</ion-select-option>

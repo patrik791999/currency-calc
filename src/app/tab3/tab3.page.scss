@@ -13,13 +13,15 @@ $font-secondary: Open Sans, 'sans-serif';
   margin-top: 0.7%;
   border-radius: 7px;
   align-items: center;
-
+}
+.selectors{
+  padding-left: 16px;
 }
 
 .button {
   appearance: none;
   margin-top: 2%;
-
+  padding-left: 16px;
   padding: 12.2px 19.3px;
   width: 90%;
   height: 85%;
