@@ -1,0 +1,68 @@
+$colors: (
+  primary:    #5f04c0,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f3f3f3,
+  dark:       #222
+);
+
+$font-stack: Roboto , 'sans-serif';
+$font-secondary: Open Sans, 'sans-serif';
+
+.date-item{
+  margin-top: 0.7%;
+  border-radius: 7px;
+  align-items: center;
+
+}
+
+.button {
+  appearance: none;
+  margin-top: 2%;
+
+  padding: 12.2px 19.3px;
+  width: 90%;
+  height: 85%;
+  display: block;
+  box-shadow: 0 10px 10px 0 rgba(34, 34, 34, 0.404);
+  background-color: #9700ed;
+  border: 0 transparent;
+  border-radius: 10px;
+  font-family: $font-stack;
+  font-size: 30px;
+  color: #f3f3f3;
+}
+
+.row-content ion-col{
+  text-align: center;
+  font-family: $font-stack;
+  border: 1px solid #cbcbcb;
+
+}
+
+.col-title{
+  text-align: center;
+  border: 1px solid #cbcbcb;
+  font-family: $font-stack;
+  font-size: 25px;
+  background-color: #9700ed;
+}
+
+h6{
+  margin: 1px;
+}
+
+.select-list-ion {
+  appearance: none;
+  margin-top: 2%;
+  width: 90%;
+  height: 85%;
+  padding: 10px;
+  box-shadow: 0 10px 10px 0 rgba(34, 34, 34, 0.404);
+  background-color: #9700ed;
+  border: 0 transparent;
+  border-radius: 10px;
+  font-family: $font-stack;
+  font-size: 30px;
+  color: #f3f3f3;
+}

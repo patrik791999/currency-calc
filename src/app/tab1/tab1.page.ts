@@ -6,6 +6,7 @@ import {Rates} from '../interfaces/rates';
 import {Convert} from '../interfaces/convert';
 import {Storage} from '@capacitor/storage';
 
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -62,10 +63,10 @@ export class Tab1Page implements OnInit{
     }
   }
 
-  calculateCurrency() {
+  async calculateCurrency() {
 
     if (this.fromValue == null){this.resultRate = null;}
-    this.getCurrencyRate(this.fromCurr, this.toCurr,this.fromValue);
+    await this.getCurrencyRate(this.fromCurr, this.toCurr,this.fromValue);
   }
 
   switchCurrencies(){
